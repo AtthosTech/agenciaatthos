@@ -1,7 +1,6 @@
-# Agência Atthos
+# Site da Agência Atthos
 
-Este repositório contém os arquivos de código-fonte para o site da Agência Atthos.
-Ele foi reestruturado para ter uma paleta de cores consistente e um design de cabeçalho e rodapé padronizado em todas as páginas.
+Este repositório contém os arquivos de código-fonte para o site da Agência Atthos. Ele foi reestruturado para ter uma paleta de cores consistente e um design de cabeçalho e rodapé padronizado em todas as páginas.
 
 ## Estrutura do Projeto
 
@@ -44,10 +43,11 @@ Bio: https://keepo.io/agencia_atthos/
 
 Instagram: https://www.instagram.com/agencia_atthos
 
+
 ### ⚠️ Aviso de Direitos Autorais
 
 Este é um projeto proprietário da **Agência Atthos**. Todos os direitos estão reservados. O uso, cópia, distribuição ou modificação deste código é estritamente proibido sem autorização expressa.
 
 
-© 2024 Agência Atthos – Suporte digital, simplificado.
 
+© 2024 Agência Atthos – Suporte digital, simplificado.
