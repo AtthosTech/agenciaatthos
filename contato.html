@@ -19,59 +19,109 @@
             <a href="index.html" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
                 <span>Agência</span><span class="text-laranja-primario">Atthos</span>
             </a>
+
             <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-laranja-primario transition-colors">Home</a>
+                <a href="index.html" class="hover:text-laranja-primario transition-colors">Início</a>
                 <a href="servicos.html" class="hover:text-laranja-primario transition-colors">Serviços</a>
                 <a href="quemsomos.html" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
-                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Blog</a>
-                <a href="contato.html" class="hover:text-laranja-primario transition-colors">Contato</a>
+                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Comunidade</a>
             </nav>
-            <button id="menu-btn" class="md:hidden text-branco-suave focus:outline-none">
-                <iconify-icon icon="material-symbols:menu-rounded" width="24" height="24"></iconify-icon>
+
+            <a href="contato.html" class="hidden md:block btn-primary">Fale Conosco</a>
+
+            <button id="menu-btn" class="md:hidden text-branco-suave hover:text-laranja-primario transition-colors p-2 focus:outline-none" aria-label="Menu">
+                <iconify-icon icon="ic:round-menu" width="32" height="32"></iconify-icon>
             </button>
-        </div>
-        <div id="mobile-menu" class="md:hidden bg-fundo-cards text-branco-suave p-4 hidden">
-            <nav class="flex flex-col space-y-2">
-                <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Home</a>
-                <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
-                <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
-                <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Blog</a>
-                <a href="contato.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Contato</a>
-            </nav>
         </div>
     </header>
 
-    <main class="pt-16">
-        <section class="bg-fundo-cards py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-titulos font-extrabold tracking-tight leading-tight">
-                    Fale Conosco
-                </h1>
-                <p class="mt-4 text-lg text-cinza-medio max-w-3xl mx-auto">
-                    Entre em contato e descubra como a Agência Atthos pode ajudar a digitalizar seu negócio.
-                </p>
-            </div>
-        </section>
+    <div id="mobile-menu" class="md:hidden bg-fundo-principal text-branco-suave p-4 hidden fixed top-16 w-full z-40">
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Início</a>
+            <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
+            <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
+            <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Comunidade</a>
+            <a href="contato.html" class="py-2 px-4 btn-primary block text-center mt-4">Fale Conosco</a>
+        </nav>
+    </div>
 
-        <section class="bg-fundo-principal py-20 px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-1 gap-12 justify-items-center">
-                    <div class="flex flex-col items-center text-center p-8 bg-fundo-cards rounded-lg shadow-xl w-full max-w-md">
-                        <iconify-icon icon="simple-icons:whatsapp" width="48" height="48" class="text-laranja-primario mb-4"></iconify-icon>
-                        <h3 class="font-titulos font-bold text-2xl">WhatsApp</h3>
-                        <p class="text-cinza-medio mt-2">Envie uma mensagem e fale com a nossa equipe.</p>
-                        <a href="https://wa.me/message/ESJRV63FECTAD1" class="mt-4 btn-primary" target="_blank">
-                            Enviar Mensagem
-                        </a>
+    <main class="pt-16">
+        
+        <section id="contato-principal" class="py-20 bg-fundo-principal">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-titulos font-extrabold mb-4">
+                        Entre em <span class="text-laranja-primario">Contato</span>
+                    </h1>
+                    <p class="text-lg text-cinza-medio max-w-2xl mx-auto">
+                        Tire suas dúvidas ou solicite um orçamento sem compromisso. Estamos prontos para ajudar a digitalizar seu sucesso.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <div class="p-8 bg-fundo-cards rounded-lg shadow-xl">
+                        <h2 class="text-2xl font-titulos font-bold mb-6 border-b border-fundo-principal pb-2">Nossas Formas de Contato</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <iconify-icon icon="simple-icons:whatsapp" width="24" height="24" class="text-laranja-primario mr-3 mt-1 flex-shrink-0"></iconify-icon>
+                                <div>
+                                    <p class="font-semibold">WhatsApp</p>
+                                    <a href="https://wa.me/message/ESJRV63FECTAD1" class="text-cinza-medio hover:text-laranja-primario transition-colors break-words" target="_blank">
+                                        Clique aqui para enviar uma mensagem
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <iconify-icon icon="ic:round-mail" width="24" height="24" class="text-laranja-primario mr-3 mt-1 flex-shrink-0"></iconify-icon>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <a href="mailto:contato@agenciaatthos.com.br" class="text-cinza-medio hover:text-laranja-primario transition-colors break-words">
+                                        contato@agenciaatthos.com.br
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <iconify-icon icon="ic:round-group" width="24" height="24" class="text-laranja-primario mr-3 mt-1 flex-shrink-0"></iconify-icon>
+                                <div>
+                                    <p class="font-semibold">Redes Sociais</p>
+                                    <p class="text-cinza-medio">
+                                        Siga-nos no <a href="https://www.instagram.com/agencia_atthos/" target="_blank" class="text-laranja-primario hover:underline">Instagram</a> e <a href="https://www.facebook.com/agenciaatthos/" target="_blank" class="text-laranja-primario hover:underline">Facebook</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 bg-fundo-cards rounded-lg shadow-xl">
+                        <h2 class="text-2xl font-titulos font-bold mb-6 border-b border-fundo-principal pb-2">Envie uma Mensagem</h2>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-branco-suave mb-1">Seu Nome</label>
+                                <input type="text" id="name" name="name" required class="w-full px-3 py-2 bg-fundo-principal border border-cinza-escuro rounded-md focus:ring-laranja-primario focus:border-laranja-primario text-branco-suave">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-branco-suave mb-1">Seu Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-3 py-2 bg-fundo-principal border border-cinza-escuro rounded-md focus:ring-laranja-primario focus:border-laranja-primario text-branco-suave">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-branco-suave mb-1">Mensagem</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 bg-fundo-principal border border-cinza-escuro rounded-md focus:ring-laranja-primario focus:border-laranja-primario text-branco-suave"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Enviar Mensagem</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-fundo-principal border-t border-fundo-cards py-8">
+    <footer class="bg-fundo-principal border-t border-fundo-cards py-8 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-cinza-medio text-sm">
-            <p>© 2023 Agência Atthos. Todos os direitos reservados.</p>
+            <p>&copy; 2023 Agência Atthos. Todos os direitos reservados.</p>
             <div class="flex gap-4 mt-4 md:mt-0">
                 <a href="https://www.facebook.com/agenciaatthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Facebook">
                     <iconify-icon icon="simple-icons:facebook" width="24" height="24"></iconify-icon>

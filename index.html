@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência Atthos | Suporte Digital para as suas necessidades</title>
-    <meta name="description" content="A Agência Atthos é a sua parceira para digitalizar e organizar o seu negócio de forma descomplicada.">
+    <title>Agência Atthos - Sua Parceira em Digitalização e Suporte</title>
+    <meta name="description" content="A Agência Atthos transforma visão em realidade, oferecendo consultoria, marketing e suporte digital. Um só lugar para impulsionar seu negócio.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
@@ -16,103 +16,136 @@
 
     <header class="fixed top-0 w-full z-50 border-b border-fundo-cards bg-fundo-principal/80 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
+            <a href="#top" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
                 <span>Agência</span><span class="text-laranja-primario">Atthos</span>
             </a>
+
             <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-laranja-primario transition-colors">Home</a>
-                <a href="servicos.html" class="hover:text-laranja-primario transition-colors">Serviços</a>
-                <a href="quemsomos.html" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
-                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Blog</a>
-                <a href="contato.html" class="hover:text-laranja-primario transition-colors">Contato</a>
+                <a href="#quemsomos" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
+                <a href="#servicos" class="hover:text-laranja-primario transition-colors">Serviços</a>
+                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Comunidade</a>
             </nav>
-            <button id="menu-btn" class="md:hidden text-branco-suave focus:outline-none">
-                <iconify-icon icon="material-symbols:menu-rounded" width="24" height="24"></iconify-icon>
+
+            <a href="#contato" class="hidden md:block btn-primary">Fale Conosco</a>
+
+            <button id="menu-btn" class="md:hidden text-branco-suave hover:text-laranja-primario transition-colors p-2 focus:outline-none" aria-label="Menu">
+                <iconify-icon icon="ic:round-menu" width="32" height="32"></iconify-icon>
             </button>
-        </div>
-        <div id="mobile-menu" class="md:hidden bg-fundo-cards text-branco-suave p-4 hidden">
-        <nav class="hidden md:flex items-center space-x-6">
-    <a href="index.html" class="text-branco-suave hover:text-laranja-primario transition-colors font-texto-corrido font-medium">Início</a>
-    <a href="servicos.html" class="text-branco-suave hover:text-laranja-primario transition-colors font-texto-corrido font-medium">Serviços</a>
-    <a href="quemsomos.html" class="text-branco-suave hover:text-laranja-primario transition-colors font-texto-corrido font-medium">Quem Somos</a>
-    <a href="comunidade-atthos.html" class="text-branco-suave hover:text-laranja-primario transition-colors font-texto-corrido font-medium">Comunidade</a>
-    <a href="contato.html" class="btn-primary">Contato</a>
-</nav>
         </div>
     </header>
 
-    <main class="mt-16">
-        <section class="min-h-screen flex items-center justify-center text-center bg-fundo-principal text-branco-suave pt-16 px-4">
-            <div class="max-w-4xl mx-auto py-24">
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-titulos font-extrabold tracking-tight leading-tight">
-                    Suporte Digital para as suas <span class="text-laranja-primario">necessidades</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-cinza-medio max-w-2xl mx-auto">
-                    A Agência Atthos é sua parceira ideal para digitalizar e organizar o seu negócio de forma descomplicada.
-                </p>
-                <div class="mt-8 flex justify-center items-center gap-4">
-                    <a href="contato.html" class="btn-primary">
-                        Fale Conosco
-                    </a>
+    <div id="mobile-menu" class="md:hidden bg-fundo-principal text-branco-suave p-4 hidden fixed top-16 w-full z-40">
+        <nav class="flex flex-col space-y-2">
+            <a href="#quemsomos" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
+            <a href="#servicos" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
+            <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Comunidade</a>
+            <a href="#contato" class="py-2 px-4 btn-primary block text-center mt-4">Fale Conosco</a>
+        </nav>
+    </div>
+
+    <main class="pt-16" id="top">
+        
+        <section id="quemsomos">
+            <div class="bg-fundo-cards py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-titulos font-extrabold tracking-tight leading-tight">
+                        Conheça a <span class="text-laranja-primario">Agência Atthos</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-cinza-medio max-w-3xl mx-auto">
+                        Transformamos visão em realidade, construindo a base sólida que seu negócio precisa para crescer e prosperar.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-fundo-principal py-20 px-4">
+                <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-titulos font-bold mb-4">Nossa Missão</h2>
+                        <p class="text-cinza-medio">
+                            Fornecer soluções digitais eficientes e inovadoras, capacitando nossos clientes a alcançar seus objetivos de forma organizada e sustentável.
+                        </p>
+                        <h2 class="text-3xl font-titulos font-bold mt-8 mb-4">Nossa Visão</h2>
+                        <p class="text-cinza-medio">
+                            Ser a parceira de consultoria digital mais confiável e recomendada do mercado, reconhecida pela excelência no suporte e pela criação de valor a longo prazo.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/212121/BDBDBD?text=Missao+e+Visao" alt="Ilustração de missão e visão de negócios" class="rounded-lg shadow-2xl">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="bg-fundo-cards text-branco-suave py-20 px-4">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-titulos font-bold text-center mb-12">Nossos Serviços</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card bg-fundo-principal p-8 rounded-lg shadow-xl text-center">
-                        <div class="mb-4">
-                            <iconify-icon icon="mingcute:digital-line" width="48" height="48" class="text-laranja-primario mx-auto"></iconify-icon>
-                        </div>
-                        <h3 class="font-titulos font-bold text-xl mb-2">Consultoria Estratégica</h3>
+        <section id="servicos" class="py-20 bg-fundo-cards">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-titulos font-extrabold mb-10">
+                    O que oferecemos: <span class="text-laranja-primario">Nossos Serviços</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="p-6 bg-fundo-principal rounded-lg shadow-xl hover:shadow-laranja-primario/20 transition-all duration-300">
+                        <iconify-icon icon="ic:round-manage-accounts" width="48" height="48" class="text-laranja-primario mb-4"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-2xl mb-2">Consultoria e Gestão</h3>
                         <p class="text-cinza-medio">
-                            Analisamos seu negócio e criamos um plano de ação para alcançar seus objetivos.
+                            Organização de processos, gestão de documentos e consultoria especializada para otimizar sua rotina e tempo.
                         </p>
+                        <a href="servicos.html#consultoria" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline">Saiba Mais →</a>
                     </div>
-                    <div class="service-card bg-fundo-principal p-8 rounded-lg shadow-xl text-center">
-                        <div class="mb-4">
-                            <iconify-icon icon="fluent:people-community-24-regular" width="48" height="48" class="text-laranja-primario mx-auto"></iconify-icon>
-                        </div>
-                        <h3 class="font-titulos font-bold text-xl mb-2">Marketing e Negócios Digitais</h3>
+
+                    <div class="p-6 bg-fundo-principal rounded-lg shadow-xl hover:shadow-laranja-primario/20 transition-all duration-300">
+                        <iconify-icon icon="ic:round-support-agent" width="48" height="48" class="text-laranja-primario mb-4"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-2xl mb-2">Suporte Digital</h3>
                         <p class="text-cinza-medio">
-                            Desenvolvemos estratégias de marketing para aumentar sua visibilidade e vendas online.
+                            Assistência técnica e treinamento para ferramentas digitais, garantindo que você aproveite o máximo da tecnologia.
                         </p>
+                        <a href="servicos.html#suporte" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline">Saiba Mais →</a>
                     </div>
-                    <div class="service-card bg-fundo-principal p-8 rounded-lg shadow-xl text-center">
-                        <div class="mb-4">
-                            <iconify-icon icon="solar:headphones-bold" width="48" height="48" class="text-laranja-primario mx-auto"></iconify-icon>
-                        </div>
-                        <h3 class="font-titulos font-bold text-xl mb-2">Suporte e Atendimento</h3>
+
+                    <div class="p-6 bg-fundo-principal rounded-lg shadow-xl hover:shadow-laranja-primario/20 transition-all duration-300">
+                        <iconify-icon icon="ic:round-trending-up" width="48" height="48" class="text-laranja-primario mb-4"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-2xl mb-2">Marketing e Negócios</h3>
                         <p class="text-cinza-medio">
-                            Oferecemos suporte contínuo para manter seu negócio funcionando sem problemas.
+                            Estratégias de marketing digital, criação de conteúdo e planejamento de negócios para alavancar sua presença online.
                         </p>
+                        <a href="servicos.html#marketing" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline">Saiba Mais →</a>
                     </div>
+
                 </div>
-                <div class="text-center mt-12">
-                    <a href="servicos.html" class="btn-primary">Ver Todos os Serviços</a>
-                </div>
+
+                <a href="servicos.html" class="mt-12 btn-primary inline-block">Ver Todos os Serviços</a>
             </div>
         </section>
-        
-        <section id="about" class="bg-fundo-principal text-branco-suave py-20 px-4">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="logo - atthos.png" alt="Equipe Atthos" class="rounded-lg shadow-2xl">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-titulos font-bold mb-4">Ajudamos você a focar no que <span class="text-laranja-primario">realmente importa</span></h2>
-                    <p class="text-cinza-medio mb-6">
-                        Na Agência Atthos, entendemos que o sucesso de um negócio está na eficiência. Nós cuidamos dos detalhes técnicos e da organização para que você possa se dedicar ao crescimento da sua marca e ao atendimento dos seus clientes.
+
+        <section id="contato" class="py-20 bg-fundo-principal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-titulos font-extrabold mb-4">
+                        Pronto para <span class="text-laranja-primario">Começar?</span>
+                    </h2>
+                    <p class="text-lg text-cinza-medio max-w-3xl mx-auto">
+                        Fale conosco hoje mesmo e descubra como a Agência Atthos pode transformar a sua rotina digital.
                     </p>
-                    <a href="quemsomos.html" class="btn-primary">Conheça Nossa História</a>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-full max-w-3xl">
+                        
+                        <div class="flex flex-col items-center text-center p-8 bg-fundo-cards rounded-lg shadow-xl w-full max-w-md mx-auto">
+                            <iconify-icon icon="simple-icons:whatsapp" width="48" height="48" class="text-laranja-primario mb-4"></iconify-icon>
+                            <h3 class="font-titulos font-bold text-2xl">WhatsApp</h3>
+                            <p class="text-cinza-medio mt-2">Envie uma mensagem e fale com a nossa equipe.</p>
+                            <a href="https://wa.me/message/ESJRV63FECTAD1" class="mt-4 btn-primary" target="_blank">
+                                Enviar Mensagem
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-fundo-principal border-t border-fundo-cards py-8">
+    <footer class="bg-fundo-principal border-t border-fundo-cards py-8 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-cinza-medio text-sm">
             <p>&copy; 2023 Agência Atthos. Todos os direitos reservados.</p>
             <div class="flex gap-4 mt-4 md:mt-0">
@@ -131,5 +164,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Adiciona um listener para fechar o menu mobile ao clicar em um link de âncora
+        document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

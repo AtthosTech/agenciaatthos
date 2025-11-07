@@ -3,8 +3,8 @@ tailwind.config = {
         extend: {
             colors: {
                 // Destaques
-                'laranja-primario': '#FF5722',
-                'laranja-claro-hover': '#FF7043',
+                'laranja-primario': '#690e40ff',
+                'laranja-claro-hover': '#1a1194ff',
                 'cinza-complementar': '#424242',
                 // Fundos
                 'fundo-principal': '#121212',
