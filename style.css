@@ -1,0 +1,81 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700&family=Montserrat:wght@700&family=Space+Grotesk&display=swap');
+
+/* Estilos globais e de utilitários */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.step-icon {
+    border: 2px solid theme('colors.lilas-complementar');
+    background-color: theme('colors.lilas-complementar');
+    color: theme('colors.principal-background');
+}
+
+.btn-primary {
+    background-color: theme('colors.roxo-primario');
+    color: theme('colors.branco-suave');
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* pílula */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: theme('colors.roxo-claro-hover');
+    transform: scale(1.05);
+}
+
+.bg-gradient-hero {
+    background: linear-gradient(to right, theme('colors.principal-background'), theme('colors.cards-surfaces'));
+}
+
+.philosophy-card {
+    background-color: theme('colors.cards-surfaces');
+}
+
+/* Estilos do blog (movidos do arquivo HTML) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+.collapsible-header.active + .collapsible-content {
+    max-height: 2000px; /* Valor alto o suficiente para qualquer conteúdo */
+    padding: 1.5rem;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    position: relative;
+    padding-right: 2.5rem;
+}
+
+.collapsible-header::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+.collapsible-header.active::after {
+    content: '−';
+    transform: translateY(-50%) rotate(0deg);
+}

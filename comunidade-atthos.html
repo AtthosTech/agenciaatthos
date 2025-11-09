@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade | Agência Atthos</title>
+    <meta name="description" content="A Comunidade Atthos é um espaço para conexão e aprendizado.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-fundo-principal text-branco-suave font-texto-corrido">
+
+    <header class="fixed top-0 w-full z-50 border-b border-fundo-cards bg-fundo-principal/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
+                <span>Agência</span><span class="text-laranja-primario">Atthos</span>
+            </a>
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-laranja-primario transition-colors">Home</a>
+                <a href="servicos.html" class="hover:text-laranja-primario transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
+                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Blog</a>
+                <a href="contato.html" class="hover:text-laranja-primario transition-colors">Contato</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-branco-suave focus:outline-none">
+                <iconify-icon icon="material-symbols:menu-rounded" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-fundo-cards text-branco-suave p-4 hidden">
+            <nav class="flex flex-col space-y-2">
+                <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Home</a>
+                <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
+                <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Blog</a>
+                <a href="contato.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <section class="bg-fundo-cards py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-titulos font-extrabold tracking-tight leading-tight">
+                    Comunidade Atthos
+                </h1>
+                <p class="mt-4 text-lg text-cinza-medio max-w-3xl mx-auto">
+                    Conecte-se, aprenda e cresça.
+                </p>
+            </div>
+        </section>
+        
+        <section class="bg-fundo-principal py-20 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl font-titulos font-bold mb-12">Por que entrar na Comunidade?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-fundo-cards p-8 rounded-lg shadow-xl text-center">
+                        <iconify-icon icon="ph:question-light" width="48" height="48" class="text-laranja-primario mb-4 mx-auto"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-xl mb-2">Tire suas dúvidas</h3>
+                        <p class="text-cinza-medio">
+                            Aqui é um espaço para esclarecer sobre o mercado de trabalho, tecnologias e muito mais.
+                        </p>
+                    </div>
+                    <div class="bg-fundo-cards p-8 rounded-lg shadow-xl text-center">
+                        <iconify-icon icon="ph:users-three-light" width="48" height="48" class="text-laranja-primario mb-4 mx-auto"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-xl mb-2">Networking</h3>
+                        <p class="text-cinza-medio">
+                         Conecte-se milhares vagas de emprego e conteudo exclusivo para impulsionar sua carreira.
+                        </p>
+                    </div>
+                    <div class="bg-fundo-cards p-8 rounded-lg shadow-xl text-center">
+                        <iconify-icon icon="ph:book-open-light" width="48" height="48" class="text-laranja-primario mb-4 mx-auto"></iconify-icon>
+                        <h3 class="font-titulos font-bold text-xl mb-2">Conteúdo Exclusivo</h3>
+                        <p class="text-cinza-medio">
+                            Tenha acesso a materiais, dicas e guias.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="https://wa.me/message/ESJRV63FECTAD1" class="btn-primary" target="_blank">
+                        Entrar na Comunidade
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-fundo-principal border-t border-fundo-cards py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-cinza-medio text-sm">
+            <p>&copy; 2025 Agência Atthos. Todos os direitos reservados.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="https://www.facebook.com/agenciaatthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Facebook">
+                    <iconify-icon icon="simple-icons:facebook" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://twitter.com/agenciaatthos" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Twitter">
+                    <iconify-icon icon="simple-icons:twitter" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://wa.me/message/ESJRV63FECTAD1" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="WhatsApp">
+                    <iconify-icon icon="simple-icons:whatsapp" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://www.instagram.com/agencia_atthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Instagram">
+                    <iconify-icon icon="simple-icons:instagram" width="24" height="24"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

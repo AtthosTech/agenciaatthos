@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda | Agência Atthos</title>
+    <meta name="description" content="Conteúdos Sobre diversos Serviços.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <style>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            /* Cor ajustada para o tema dark */
+            background-color: #212121; 
+            border-radius: 0.5rem;
+            padding: 0 1.5rem;
+        }
+        .collapsible-header.active + .collapsible-content {
+            max-height: 2000px; /* Valor alto o suficiente para qualquer conteúdo */
+            padding: 1.5rem;
+        }
+        .collapsible-header {
+            cursor: pointer;
+            position: relative;
+            padding-right: 2.5rem;
+        }
+        /* A rotação do ícone é controlada pelo script.js e style.css agora */
+        .collapsible-header iconify-icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.4s;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-fundo-principal text-branco-suave font-texto-corrido">
+
+    <header class="fixed top-0 w-full z-50 border-b border-fundo-cards bg-fundo-principal/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
+                <span>Agência</span><span class="text-laranja-primario">Atthos</span>
+            </a>
+
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-laranja-primario transition-colors">Início</a>
+                <a href="servicos.html" class="hover:text-laranja-primario transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
+                <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Comunidade</a>
+            </nav>
+
+            <a href="contato.html" class="hidden md:block btn-primary">Fale Conosco</a>
+
+            <button id="menu-btn" class="md:hidden text-branco-suave hover:text-laranja-primario transition-colors p-2 focus:outline-none" aria-label="Menu">
+                <iconify-icon icon="ic:round-menu" width="32" height="32"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="md:hidden bg-fundo-principal text-branco-suave p-4 hidden fixed top-16 w-full z-40">
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Início</a>
+            <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
+            <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
+            <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Comunidade</a>
+            <a href="contato.html" class="py-2 px-4 btn-primary block text-center mt-4">Fale Conosco</a>
+        </nav>
+    </div>
+    
+    <main class="container mx-auto px-4 py-12 mt-16">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-branco-suave leading-tight">Central de Ajuda</h1>
+            <p class="mt-4 text-lg text-cinza-medio max-w-2xl mx-auto">
+                Nossa missão é compartilhar informações para ajudar a todos. Aqui você encontra guias práticos, artigos e respostas para as dúvidas mais comuns sobre diversos serviços.
+            </p>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/0054a3/ffffff?text=DETRAN" alt="Imagem ilustrativa para o guia sobre o DETRAN" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2"> 00 - O que é o DETRAN</h2>
+                    <p class="text-cinza-medio text-sm">Entenda a função e a importância do Departamento Estadual de Trânsito (DETRAN) e como ele regula os serviços veiculares e de habilitação.</p>
+                    <a href="#detran-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Licenciamento" alt="Imagem ilustrativa para o guia de Licenciamento Anual" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2">01 - Licenciamento Anual</h2>
+                    <p class="text-cinza-medio text-sm">Guia sobre o licenciamento anual do seu veículo. Entenda o processo, a documentação, os prazos e evite multas.</p>
+                    <a href="#licenciamento-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/6B7280/ffffff?text=Transferencia" alt="Imagem ilustrativa para o guia de Transferência de Veículo" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2">02 - Transferência de Veículo</h2>
+                    <p class="text-cinza-medio text-sm">Conheça a documentação necessária, o passo a passo e como a MEV Consultoria garante uma transação segura e sem dor de cabeça.</p>
+                    <a href="#transferencia-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/4B5563/ffffff?text=Multas" alt="Imagem ilustrativa para o guia de Como Recorrer de Multas" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2">03 - Como Recorrer de Multas</h2>
+                    <p class="text-cinza-medio text-sm">Saiba como recorrer de uma multa de trânsito de forma simples. Entenda os prazos, a documentação necessária.</p>
+                    <a href="#multas-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/292524/ffffff?text=Isencao+PCD" alt="Imagem ilustrativa para o guia de Isenção para PCD" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2">04 - Isenção para PCD</h2>
+                    <p class="text-cinza-medio text-sm">Descubra os direitos e o processo para obter a isenção de impostos (IPI, ICMS) na compra de veículos para pessoas com deficiência.</p>
+                    <a href="#isencao-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/171717/ffffff?text=CNH" alt="Imagem ilustrativa para o guia de Renovação de CNH" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-laranja-primario mb-2">05 - Renovação da CNH</h2>
+                    <p class="text-cinza-medio text-sm">Passo a passo sobre a renovação da sua Carteira Nacional de Habilitação. Documentos, taxas e exames obrigatórios.</p>
+                    <a href="#cnh-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="max-w-4xl mx-auto space-y-4">
+            
+            <div id="detran-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    00 - O que é o DETRAN?
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio pb-4">
+                        O Departamento Estadual de Trânsito (DETRAN) é o órgão responsável pela fiscalização, regulamentação e administração do trânsito de veículos e condutores em cada estado do Brasil. Suas principais funções incluem a emissão da Carteira Nacional de Habilitação (CNH) e do Certificado de Registro e Licenciamento de Veículos (CRLV).
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mb-2">Serviços Chave:</h3>
+                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
+                        <li>Habilitação de condutores.</li>
+                        <li>Registro e licenciamento de veículos.</li>
+                        <li>Fiscalização e aplicação de multas.</li>
+                        <li>Educação para o trânsito.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="licenciamento-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    01 - Licenciamento Anual (CRLV)
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio">
+                        O Licenciamento Anual é obrigatório para todos os veículos. É o processo que atesta que seu veículo está em conformidade com as normas de segurança e ambientais para circular.
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Como Funciona:</h3>
+                    <ol class="list-decimal list-inside text-cinza-medio space-y-1 ml-4">
+                        <li>Quitar todos os débitos (IPVA, DPVAT e Multas).</li>
+                        <li>Acessar o portal do DETRAN para emitir a taxa de licenciamento.</li>
+                        <li>Pagar a taxa.</li>
+                        <li>O Certificado de Registro e Licenciamento de Veículo (CRLV) será emitido digitalmente.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id="transferencia-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    02 - Transferência de Veículo
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio">
+                        A transferência de propriedade é essencial após a compra ou venda de um veículo. O prazo legal para o novo proprietário realizar o procedimento é de 30 dias.
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Documentos Principais:</h3>
+                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
+                        <li>CRV (Certificado de Registro de Veículo) preenchido e assinado.</li>
+                        <li>Comprovante de residência atualizado.</li>
+                        <li>Laudo de Vistoria Veicular.</li>
+                        <li>RG e CPF do novo proprietário.</li>
+                    </ul>
+                    <p class="text-cinza-medio pt-4">
+                        <strong class="text-laranja-primario">Atenção:</strong> A falta de transferência no prazo gera multa e pontuação na CNH.
+                    </p>
+                </div>
+            </div>
+
+            <div id="multas-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    03 - Como Recorrer de Multas
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio">
+                        Você tem o direito de se defender de qualquer autuação. O processo de recurso de multas é dividido em três etapas:
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Etapas do Recurso:</h3>
+                    <ol class="list-decimal list-inside text-cinza-medio space-y-1 ml-4">
+                        <li><strong>Defesa Prévia:</strong> Para erros formais na notificação (dados incorretos, modelo do veículo, etc.).</li>
+                        <li><strong>JARI:</strong> Se a defesa prévia for negada, é o recurso à Junta Administrativa de Recursos de Infrações.</li>
+                        <li><strong>CETRAN/CONTRAN:</strong> Última instância de recurso, direcionado aos Conselhos Estaduais ou Nacionais de Trânsito.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id="isencao-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    04 - Isenção de Impostos para PCD
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio">
+                        A isenção de IPI, ICMS, IOF e IPVA na compra de veículos é um direito de Pessoas com Deficiência (PCD) e seus representantes legais. O processo exige laudos médicos e aprovação dos órgãos competentes.
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Passos Iniciais:</h3>
+                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
+                        <li>Obtenção de Laudo Médico do SUS ou clínicas credenciadas.</li>
+                        <li>Processo de isenção de IPI junto à Receita Federal.</li>
+                        <li>Processo de isenção de ICMS junto à Sefaz Estadual.</li>
+                    </ul>
+                    <p class="text-cinza-medio pt-4">
+                        <strong class="text-laranja-primario">Podemos Ajudar:</strong> A Agência Atthos oferece consultoria completa para organizar todos os documentos necessários.
+                    </p>
+                </div>
+            </div>
+
+            <div id="cnh-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
+                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+                    05 - Renovação da CNH
+                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
+                </h2>
+                <div class="collapsible-content">
+                    <p class="text-cinza-medio">
+                        A renovação da CNH deve ser feita antes do prazo de validade. A partir do vencimento, o condutor tem 30 dias para regularizar a situação sem penalidades.
+                    </p>
+                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Checklist Rápido:</h3>
+                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
+                        <li>Agendamento do Exame Médico (aptidão física e mental).</li>
+                        <li>Para motoristas que exercem atividade remunerada, é necessário o Exame Psicológico (EAR).</li>
+                        <li>Pagamento da taxa de renovação.</li>
+                        <li>Emissão da nova via.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <footer class="bg-fundo-principal border-t border-fundo-cards py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-cinza-medio text-sm">
+            <p>&copy; 2023 Agência Atthos. Todos os direitos reservados.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="https://www.facebook.com/agenciaatthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Facebook">
+                    <iconify-icon icon="simple-icons:facebook" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://twitter.com/agenciaatthos" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Twitter">
+                    <iconify-icon icon="simple-icons:twitter" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://wa.me/message/ESJRV63FECTAD1" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="WhatsApp">
+                    <iconify-icon icon="simple-icons:whatsapp" width="24" height="24"></iconify-icon>
+                </a>
+                <a href="https://www.instagram.com/agencia_atthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Instagram">
+                    <iconify-icon icon="simple-icons:instagram" width="24" height="24"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
