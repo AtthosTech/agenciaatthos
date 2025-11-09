@@ -12,37 +12,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <style>
+        /* Mantido apenas o estilo de hover para os cards principais */
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
-        .collapsible-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            /* Cor ajustada para o tema dark */
-            background-color: #212121; 
-            border-radius: 0.5rem;
-            padding: 0 1.5rem;
-        }
-        .collapsible-header.active + .collapsible-content {
-            max-height: 2000px; /* Valor alto o suficiente para qualquer conteúdo */
-            padding: 1.5rem;
-        }
-        .collapsible-header {
-            cursor: pointer;
-            position: relative;
-            padding-right: 2.5rem;
-        }
-        /* A rotação do ícone é controlada pelo script.js e style.css agora */
-        .collapsible-header iconify-icon {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%) rotate(0deg);
-            transition: transform 0.4s;
-            font-size: 1.5rem;
-        }
+        /* Os estilos do collapsible (comportamental) foram removidos */
     </style>
 </head>
 <body class="bg-fundo-principal text-branco-suave font-texto-corrido">
@@ -144,15 +119,14 @@
 
         </section>
 
-        <section class="max-w-4xl mx-auto space-y-4">
+        <section class="max-w-4xl mx-auto space-y-8">
             
-            <div id="detran-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="detran-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     00 - O que é o DETRAN?
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
-                    <p class="text-cinza-medio pb-4">
+                <div class="space-y-4">
+                    <p class="text-cinza-medio">
                         O Departamento Estadual de Trânsito (DETRAN) é o órgão responsável pela fiscalização, regulamentação e administração do trânsito de veículos e condutores em cada estado do Brasil. Suas principais funções incluem a emissão da Carteira Nacional de Habilitação (CNH) e do Certificado de Registro e Licenciamento de Veículos (CRLV).
                     </p>
                     <h3 class="text-lg font-bold text-laranja-primario mb-2">Serviços Chave:</h3>
@@ -165,12 +139,11 @@
                 </div>
             </div>
 
-            <div id="licenciamento-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="licenciamento-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     01 - Licenciamento Anual (CRLV)
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
+                <div class="space-y-4">
                     <p class="text-cinza-medio">
                         O Licenciamento Anual é obrigatório para todos os veículos. É o processo que atesta que seu veículo está em conformidade com as normas de segurança e ambientais para circular.
                     </p>
@@ -184,12 +157,11 @@
                 </div>
             </div>
 
-            <div id="transferencia-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="transferencia-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     02 - Transferência de Veículo
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
+                <div class="space-y-4">
                     <p class="text-cinza-medio">
                         A transferência de propriedade é essencial após a compra ou venda de um veículo. O prazo legal para o novo proprietário realizar o procedimento é de 30 dias.
                     </p>
@@ -206,12 +178,11 @@
                 </div>
             </div>
 
-            <div id="multas-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="multas-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     03 - Como Recorrer de Multas
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
+                <div class="space-y-4">
                     <p class="text-cinza-medio">
                         Você tem o direito de se defender de qualquer autuação. O processo de recurso de multas é dividido em três etapas:
                     </p>
@@ -224,12 +195,11 @@
                 </div>
             </div>
 
-            <div id="isencao-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="isencao-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     04 - Isenção de Impostos para PCD
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
+                <div class="space-y-4">
                     <p class="text-cinza-medio">
                         A isenção de IPI, ICMS, IOF e IPVA na compra de veículos é um direito de Pessoas com Deficiência (PCD) e seus representantes legais. O processo exige laudos médicos e aprovação dos órgãos competentes.
                     </p>
@@ -245,12 +215,11 @@
                 </div>
             </div>
 
-            <div id="cnh-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden">
-                <h2 class="collapsible-header text-xl font-bold p-6 text-branco-suave hover:bg-fundo-principal transition-colors">
+            <div id="cnh-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
+                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
                     05 - Renovação da CNH
-                    <iconify-icon icon="ic:round-expand-more" class="text-laranja-primario"></iconify-icon>
                 </h2>
-                <div class="collapsible-content">
+                <div class="space-y-4">
                     <p class="text-cinza-medio">
                         A renovação da CNH deve ser feita antes do prazo de validade. A partir do vencimento, o condutor tem 30 dias para regularizar a situação sem penalidades.
                     </p>
@@ -286,5 +255,5 @@
             </div>
         </div>
     </footer>
-    </body>
+</body>
 </html>

@@ -17,18 +17,20 @@ Ele foi reestruturado para ter uma paleta de cores consistente e um design de ca
 
 ## Paleta de Cores
 
-A nova paleta de cores é baseada em tons de cinza com um toque de laranja para os destaques.
+A paleta de cores agora está padronizada em tons de cinza com um toque de **roxo** para os destaques.
 
 | Nome da Cor | Código HEX | Uso |
 | :--- | :--- | :--- |
-| `laranja-primario` | `#FF5722` | Destaques, botões e links em hover. |
-| `laranja-claro-hover` | `#FF7043` | Variação do laranja para interações. |
+| `roxo-primario` | `#7116AA` | Destaques, botões e links principais. |
+| `roxo-claro-hover` | `#C084FC` | Variação do destaque para interações (hover). |
 | `cinza-complementar` | `#424242` | Elementos de apoio, ícones. |
 | `fundo-principal` | `#121212` | Fundo principal do site. |
 | `fundo-cards` | `#212121` | Fundo de cartões e seções secundárias. |
 | `branco-suave` | `#E0E0E0` | Texto principal. |
 | `cinza-medio` | `#BDBDBD` | Texto secundário e legendas. |
 | `cinza-escuro` | `#757575` | Linhas de separação e detalhes. |
+
+*Nota: As classes antigas `laranja-primario` e `laranja-claro-hover` no HTML foram **mapeadas** no arquivo `tailwind.config.js` para os novos tons de roxo (`#7116AA` e `#C084FC`), mantendo a compatibilidade visual sem a necessidade de alterar o conteúdo HTML, conforme as regras.*
 
 ## Como Iniciar
 
