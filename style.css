@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700&family=Montserrat:wght@700&family=Space+Grotesk&display=swap');
 
 /* Estilos globais e de utilitários */
-/* ... (service-card e card:hover mantidos) */
 
 .step-icon {
     /* Corrigido: 'lilas-complementar' -> 'cinza-complementar' */
@@ -25,4 +24,14 @@
 .btn-primary:hover {
     /* A cor de hover será o novo roxo claro definido em tailwind.config.js */
     background-color: theme('colors.roxo-claro-hover');
+}
+
+/* Estilos para cards do blog */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }

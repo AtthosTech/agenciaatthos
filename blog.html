@@ -3,242 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Ajuda | Agência Atthos</title>
-    <meta name="description" content="Conteúdos Sobre diversos Serviços.">
+    <title>Central de Conteúdo | Agência Atthos</title>
+    <meta name="description" content="Guias práticos, dicas de carreira e estratégias de negócios para você crescer.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-    <style>
-        /* Mantido apenas o estilo de hover para os cards principais */
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-        }
-        /* Os estilos do collapsible (comportamental) foram removidos */
-    </style>
+    <script src="script.js"></script>
 </head>
-<body class="bg-fundo-principal text-branco-suave font-texto-corrido">
+<body class="bg-fundo-principal text-branco-suave font-texto-corrido flex flex-col min-h-screen">
 
     <header class="fixed top-0 w-full z-50 border-b border-fundo-cards bg-fundo-principal/80 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2 text-branco-suave font-extrabold text-xl">
                 <span>Agência</span><span class="text-laranja-primario">Atthos</span>
             </a>
-
-            <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-laranja-primario transition-colors">Início</a>
+            
+            <nav id="menu" class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-laranja-primario transition-colors">Home</a>
                 <a href="servicos.html" class="hover:text-laranja-primario transition-colors">Serviços</a>
                 <a href="quemsomos.html" class="hover:text-laranja-primario transition-colors">Quem Somos</a>
                 <a href="comunidade-atthos.html" class="hover:text-laranja-primario transition-colors">Comunidade</a>
+                <a href="blog.html" class="hover:text-laranja-primario transition-colors font-bold text-laranja-primario">Central de Ajuda</a>
+                <a href="contato.html" class="btn-primary ml-4">Fale Conosco</a>
             </nav>
 
-            <a href="contato.html" class="hidden md:block btn-primary">Fale Conosco</a>
-
-            <button id="menu-btn" class="md:hidden text-branco-suave hover:text-laranja-primario transition-colors p-2 focus:outline-none" aria-label="Menu">
-                <iconify-icon icon="ic:round-menu" width="32" height="32"></iconify-icon>
+            <button id="menu-btn" class="md:hidden text-branco-suave focus:outline-none">
+                <iconify-icon icon="material-symbols:menu-rounded" width="28" height="28"></iconify-icon>
             </button>
         </div>
-    </header>
 
-    <div id="mobile-menu" class="md:hidden bg-fundo-principal text-branco-suave p-4 hidden fixed top-16 w-full z-40">
-        <nav class="flex flex-col space-y-2">
-            <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Início</a>
-            <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Serviços</a>
-            <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Quem Somos</a>
-            <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover rounded transition-colors">Comunidade</a>
-            <a href="contato.html" class="py-2 px-4 btn-primary block text-center mt-4">Fale Conosco</a>
-        </nav>
-    </div>
+        <div id="mobile-menu" class="md:hidden bg-fundo-cards text-branco-suave p-4 hidden border-t border-cinza-complementar">
+            <nav class="flex flex-col space-y-2">
+                <a href="index.html" class="py-2 px-4 hover:bg-laranja-claro-hover/10 rounded transition-colors text-branco-suave">Início</a>
+                <a href="servicos.html" class="py-2 px-4 hover:bg-laranja-claro-hover/10 rounded transition-colors text-branco-suave">Serviços</a>
+                <a href="quemsomos.html" class="py-2 px-4 hover:bg-laranja-claro-hover/10 rounded transition-colors text-branco-suave">Quem Somos</a>
+                <a href="comunidade-atthos.html" class="py-2 px-4 hover:bg-laranja-claro-hover/10 rounded transition-colors text-branco-suave">Comunidade</a>
+                <a href="blog.html" class="py-2 px-4 hover:bg-laranja-claro-hover/10 rounded transition-colors text-branco-suave font-bold">Central de Ajuda</a>
+                <a href="contato.html" class="py-2 px-4 btn-primary text-center mt-2 w-full inline-block">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
     
-    <main class="container mx-auto px-4 py-12 mt-16">
-        <section class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-branco-suave leading-tight">Central de Ajuda</h1>
+    <main class="flex-grow container mx-auto px-4 py-12 mt-16">
+        <section class="text-center mb-16 pt-10">
+            <h1 class="text-4xl md:text-5xl font-titulos font-extrabold text-branco-suave leading-tight">
+                Conteúdo que <span class="text-laranja-primario">Transforma</span>
+            </h1>
             <p class="mt-4 text-lg text-cinza-medio max-w-2xl mx-auto">
-                Nossa missão é compartilhar informações para ajudar a todos. Aqui você encontra guias práticos, artigos e respostas para as dúvidas mais comuns sobre diversos serviços.
+                Aprenda, cresça e organize sua carreira e negócio. Abaixo você encontra guias práticos, modelos editáveis e estratégias reais.
             </p>
         </section>
 
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
 
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/0054a3/ffffff?text=DETRAN" alt="Imagem ilustrativa para o guia sobre o DETRAN" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2"> 00 - O que é o DETRAN</h2>
-                    <p class="text-cinza-medio text-sm">Entenda a função e a importância do Departamento Estadual de Trânsito (DETRAN) e como ele regula os serviços veiculares e de habilitação.</p>
-                    <a href="#detran-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+            <a href="#precificacao" class="bg-fundo-cards rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-roxo-primario/20 border border-transparent hover:border-roxo-primario/30 group cursor-pointer">
+                <div class="bg-fundo-principal p-4 rounded-full mb-4 group-hover:bg-roxo-primario/20 transition-colors">
+                    <iconify-icon icon="heroicons:calculator" width="40" height="40" class="text-laranja-primario"></iconify-icon>
                 </div>
-            </div>
+                <h2 class="text-xl font-bold text-branco-suave mb-2 group-hover:text-laranja-primario">Precificação Descomplicada</h2>
+                <p class="text-cinza-medio text-sm">Aprenda a calcular o preço certo usando Markup e pare de pagar para trabalhar.</p>
+            </a>
 
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Licenciamento" alt="Imagem ilustrativa para o guia de Licenciamento Anual" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2">01 - Licenciamento Anual</h2>
-                    <p class="text-cinza-medio text-sm">Guia sobre o licenciamento anual do seu veículo. Entenda o processo, a documentação, os prazos e evite multas.</p>
-                    <a href="#licenciamento-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+            <a href="#como-montar-curriculo" class="bg-fundo-cards rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-roxo-primario/20 border border-transparent hover:border-roxo-primario/30 group cursor-pointer">
+                <div class="bg-fundo-principal p-4 rounded-full mb-4 group-hover:bg-roxo-primario/20 transition-colors">
+                    <iconify-icon icon="heroicons:document-text" width="40" height="40" class="text-laranja-primario"></iconify-icon>
                 </div>
-            </div>
+                <h2 class="text-xl font-bold text-branco-suave mb-2 group-hover:text-laranja-primario">Como Montar um Currículo</h2>
+                <p class="text-cinza-medio text-sm">O passo a passo para criar um currículo que abre portas e destaca suas qualidades.</p>
+            </a>
 
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/6B7280/ffffff?text=Transferencia" alt="Imagem ilustrativa para o guia de Transferência de Veículo" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2">02 - Transferência de Veículo</h2>
-                    <p class="text-cinza-medio text-sm">Conheça a documentação necessária, o passo a passo e como a MEV Consultoria garante uma transação segura e sem dor de cabeça.</p>
-                    <a href="#transferencia-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+            <a href="#modelos-curriculo" class="bg-fundo-cards rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-roxo-primario/20 border border-transparent hover:border-roxo-primario/30 group cursor-pointer">
+                <div class="bg-fundo-principal p-4 rounded-full mb-4 group-hover:bg-roxo-primario/20 transition-colors">
+                    <iconify-icon icon="heroicons:clipboard-document-list" width="40" height="40" class="text-laranja-primario"></iconify-icon>
                 </div>
-            </div>
+                <h2 class="text-xl font-bold text-branco-suave mb-2 group-hover:text-laranja-primario">Modelos Editáveis</h2>
+                <p class="text-cinza-medio text-sm">Copie e cole nossos modelos prontos de currículo (Padrão e ATS Friendly).</p>
+            </a>
 
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/4B5563/ffffff?text=Multas" alt="Imagem ilustrativa para o guia de Como Recorrer de Multas" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2">03 - Como Recorrer de Multas</h2>
-                    <p class="text-cinza-medio text-sm">Saiba como recorrer de uma multa de trânsito de forma simples. Entenda os prazos, a documentação necessária.</p>
-                    <a href="#multas-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
+            <a href="#ats-guia" class="bg-fundo-cards rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-roxo-primario/20 border border-transparent hover:border-roxo-primario/30 group cursor-pointer">
+                <div class="bg-fundo-principal p-4 rounded-full mb-4 group-hover:bg-roxo-primario/20 transition-colors">
+                    <iconify-icon icon="heroicons:cpu-chip" width="40" height="40" class="text-laranja-primario"></iconify-icon>
                 </div>
-            </div>
-
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/292524/ffffff?text=Isencao+PCD" alt="Imagem ilustrativa para o guia de Isenção para PCD" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2">04 - Isenção para PCD</h2>
-                    <p class="text-cinza-medio text-sm">Descubra os direitos e o processo para obter a isenção de impostos (IPI, ICMS) na compra de veículos para pessoas com deficiência.</p>
-                    <a href="#isencao-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
-                </div>
-            </div>
-
-            <div class="bg-fundo-cards rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
-                <img src="https://placehold.co/600x400/171717/ffffff?text=CNH" alt="Imagem ilustrativa para o guia de Renovação de CNH" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-laranja-primario mb-2">05 - Renovação da CNH</h2>
-                    <p class="text-cinza-medio text-sm">Passo a passo sobre a renovação da sua Carteira Nacional de Habilitação. Documentos, taxas e exames obrigatórios.</p>
-                    <a href="#cnh-completo" class="mt-4 inline-block text-laranja-primario font-semibold hover:underline transition duration-300">Saiba Mais →</a>
-                </div>
-            </div>
+                <h2 class="text-xl font-bold text-branco-suave mb-2 group-hover:text-laranja-primario">O que é ATS?</h2>
+                <p class="text-cinza-medio text-sm">Entenda como os robôs leem seu currículo e como ser aprovado por eles.</p>
+            </a>
 
         </section>
 
-        <section class="max-w-4xl mx-auto space-y-8">
-            
-            <div id="detran-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    00 - O que é o DETRAN?
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        O Departamento Estadual de Trânsito (DETRAN) é o órgão responsável pela fiscalização, regulamentação e administração do trânsito de veículos e condutores em cada estado do Brasil. Suas principais funções incluem a emissão da Carteira Nacional de Habilitação (CNH) e do Certificado de Registro e Licenciamento de Veículos (CRLV).
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mb-2">Serviços Chave:</h3>
-                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
-                        <li>Habilitação de condutores.</li>
-                        <li>Registro e licenciamento de veículos.</li>
-                        <li>Fiscalização e aplicação de multas.</li>
-                        <li>Educação para o trânsito.</li>
+        <div class="max-w-4xl mx-auto space-y-16">
+
+            <article id="precificacao" class="bg-fundo-cards rounded-2xl p-8 shadow-xl border-l-4 border-laranja-primario">
+                <div class="mb-6 border-b border-cinza-complementar pb-4">
+                    <h2 class="text-3xl font-titulos font-bold text-laranja-primario flex items-center gap-3">
+                        <iconify-icon icon="heroicons:currency-dollar"></iconify-icon> Precificação Descomplicada
+                    </h2>
+                    <p class="text-cinza-medio mt-2">Como cobrar o preço certo e sair do prejuízo.</p>
+                </div>
+
+                <div class="space-y-6 text-cinza-medio leading-relaxed text-lg">
+                    <p>Se você já chutou um preço ou cobrou igual ao concorrente, provavelmente já correu o risco de trabalhar muito e lucrar pouco. A verdade é simples: <strong>precificação é matemática com estratégia</strong>.</p>
+
+                    <h3 class="text-xl font-bold text-branco-suave">1. O que é Markup?</h3>
+                    <p>O Markup é o “tempero” que transforma seu custo no preço final. Ele cobre:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4 bg-fundo-principal p-4 rounded-lg">
+                        <li><strong>Despesas Fixas:</strong> Contas mensais (aluguel, internet).</li>
+                        <li><strong>Despesas Variáveis:</strong> Mudam conforme a venda (embalagem, taxas).</li>
+                        <li><strong>Lucro:</strong> O que sobra limpo para você.</li>
+                    </ul>
+
+                    <div class="bg-laranja-primario/10 border border-laranja-primario p-4 rounded-lg text-center my-6">
+                        <p class="font-bold text-branco-suave mb-2">📌 Fórmula base:</p>
+                        <code class="text-laranja-primario text-xl font-mono">Preço de Venda = Custo Total × (1 + % despesas + % lucro)</code>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-branco-suave">2. Erros Clássicos</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Copiar preço do concorrente sem saber os custos dele.</li>
+                        <li>Ignorar seu tempo de mão de obra como custo.</li>
+                        <li>Misturar lucro da empresa com seu salário (pró-labore).</li>
                     </ul>
                 </div>
-            </div>
+                <div class="mt-8 text-right">
+                    <a href="#" class="text-sm text-laranja-primario hover:underline">Voltar ao topo ↑</a>
+                </div>
+            </article>
 
-            <div id="licenciamento-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    01 - Licenciamento Anual (CRLV)
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        O Licenciamento Anual é obrigatório para todos os veículos. É o processo que atesta que seu veículo está em conformidade com as normas de segurança e ambientais para circular.
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Como Funciona:</h3>
-                    <ol class="list-decimal list-inside text-cinza-medio space-y-1 ml-4">
-                        <li>Quitar todos os débitos (IPVA, DPVAT e Multas).</li>
-                        <li>Acessar o portal do DETRAN para emitir a taxa de licenciamento.</li>
-                        <li>Pagar a taxa.</li>
-                        <li>O Certificado de Registro e Licenciamento de Veículo (CRLV) será emitido digitalmente.</li>
+            <article id="como-montar-curriculo" class="bg-fundo-cards rounded-2xl p-8 shadow-xl border-l-4 border-laranja-primario">
+                <div class="mb-6 border-b border-cinza-complementar pb-4">
+                    <h2 class="text-3xl font-titulos font-bold text-laranja-primario flex items-center gap-3">
+                        <iconify-icon icon="heroicons:pencil-square"></iconify-icon> Como Montar um Currículo?
+                    </h2>
+                    <p class="text-cinza-medio mt-2">Seu cartão de visitas profissional, sem enrolação.</p>
+                </div>
+
+                <div class="space-y-6 text-cinza-medio leading-relaxed text-lg">
+                    <p>Seu currículo não deve contar sua vida inteira. Ele serve para mostrar o essencial: quem você é, o que sabe fazer e como pode contribuir.</p>
+                    
+                    <h3 class="text-xl font-bold text-branco-suave">📌 O que não pode faltar:</h3>
+                    <ol class="list-decimal list-inside space-y-3 ml-2">
+                        <li><strong>Dados de Contato:</strong> Nome, cidade, telefone (WhatsApp) e e-mail profissional.</li>
+                        <li><strong>Objetivo:</strong> Curto e direto (ex: "Busco oportunidade na área de Vendas").</li>
+                        <li><strong>Experiência:</strong> Vale freelancer, estágio e apoio a familiares. Foque nos resultados.</li>
+                        <li><strong>Formação:</strong> Nome da escola/faculdade e previsão de término.</li>
                     </ol>
-                </div>
-            </div>
 
-            <div id="transferencia-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    02 - Transferência de Veículo
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        A transferência de propriedade é essencial após a compra ou venda de um veículo. O prazo legal para o novo proprietário realizar o procedimento é de 30 dias.
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Documentos Principais:</h3>
-                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
-                        <li>CRV (Certificado de Registro de Veículo) preenchido e assinado.</li>
-                        <li>Comprovante de residência atualizado.</li>
-                        <li>Laudo de Vistoria Veicular.</li>
-                        <li>RG e CPF do novo proprietário.</li>
-                    </ul>
-                    <p class="text-cinza-medio pt-4">
-                        <strong class="text-laranja-primario">Atenção:</strong> A falta de transferência no prazo gera multa e pontuação na CNH.
-                    </p>
+                    <div class="bg-red-500/10 border border-red-500/50 p-4 rounded-lg mt-6">
+                        <h4 class="font-bold text-red-400 mb-2">🚫 Evite isso:</h4>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Foto (a não ser que a vaga peça).</li>
+                            <li>Mentiras (elas sempre são descobertas).</li>
+                            <li>Nome do arquivo confuso (Use: Nome_Sobrenome_Curriculo.pdf).</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <div id="multas-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    03 - Como Recorrer de Multas
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        Você tem o direito de se defender de qualquer autuação. O processo de recurso de multas é dividido em três etapas:
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Etapas do Recurso:</h3>
-                    <ol class="list-decimal list-inside text-cinza-medio space-y-1 ml-4">
-                        <li><strong>Defesa Prévia:</strong> Para erros formais na notificação (dados incorretos, modelo do veículo, etc.).</li>
-                        <li><strong>JARI:</strong> Se a defesa prévia for negada, é o recurso à Junta Administrativa de Recursos de Infrações.</li>
-                        <li><strong>CETRAN/CONTRAN:</strong> Última instância de recurso, direcionado aos Conselhos Estaduais ou Nacionais de Trânsito.</li>
-                    </ol>
+                <div class="mt-8 text-right">
+                    <a href="#" class="text-sm text-laranja-primario hover:underline">Voltar ao topo ↑</a>
                 </div>
-            </div>
+            </article>
 
-            <div id="isencao-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    04 - Isenção de Impostos para PCD
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        A isenção de IPI, ICMS, IOF e IPVA na compra de veículos é um direito de Pessoas com Deficiência (PCD) e seus representantes legais. O processo exige laudos médicos e aprovação dos órgãos competentes.
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Passos Iniciais:</h3>
-                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
-                        <li>Obtenção de Laudo Médico do SUS ou clínicas credenciadas.</li>
-                        <li>Processo de isenção de IPI junto à Receita Federal.</li>
-                        <li>Processo de isenção de ICMS junto à Sefaz Estadual.</li>
-                    </ul>
-                    <p class="text-cinza-medio pt-4">
-                        <strong class="text-laranja-primario">Podemos Ajudar:</strong> A Agência Atthos oferece consultoria completa para organizar todos os documentos necessários.
-                    </p>
+            <article id="ats-guia" class="bg-fundo-cards rounded-2xl p-8 shadow-xl border-l-4 border-laranja-primario">
+                <div class="mb-6 border-b border-cinza-complementar pb-4">
+                    <h2 class="text-3xl font-titulos font-bold text-laranja-primario flex items-center gap-3">
+                        <iconify-icon icon="heroicons:cpu-chip"></iconify-icon> O que é ATS?
+                    </h2>
+                    <p class="text-cinza-medio mt-2">Como vencer os robôs recrutadores.</p>
                 </div>
-            </div>
 
-            <div id="cnh-completo" class="bg-fundo-cards rounded-lg shadow-xl overflow-hidden p-6">
-                <h2 class="text-2xl font-bold text-laranja-primario mb-4 border-b border-cinza-escuro pb-2">
-                    05 - Renovação da CNH
-                </h2>
-                <div class="space-y-4">
-                    <p class="text-cinza-medio">
-                        A renovação da CNH deve ser feita antes do prazo de validade. A partir do vencimento, o condutor tem 30 dias para regularizar a situação sem penalidades.
-                    </p>
-                    <h3 class="text-lg font-bold text-laranja-primario mt-4 mb-2">Checklist Rápido:</h3>
-                    <ul class="list-disc list-inside text-cinza-medio space-y-1 ml-4">
-                        <li>Agendamento do Exame Médico (aptidão física e mental).</li>
-                        <li>Para motoristas que exercem atividade remunerada, é necessário o Exame Psicológico (EAR).</li>
-                        <li>Pagamento da taxa de renovação.</li>
-                        <li>Emissão da nova via.</li>
+                <div class="space-y-6 text-cinza-medio leading-relaxed text-lg">
+                    <p><strong>ATS (Applicant Tracking System)</strong> é um filtro automático que empresas (Gupy, Kenoby) usam para ler seu currículo antes de um humano.</p>
+
+                    <h3 class="text-xl font-bold text-branco-suave">Como vencer o robô:</h3>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li><strong>Palavras-chave:</strong> Leia a descrição da vaga. Se pedem "Excel Avançado", escreva exatamente isso.</li>
+                        <li><strong>Formatação Simples:</strong> Tabelas complexas, colunas duplas e gráficos podem confundir o robô. Prefira texto corrido.</li>
+                        <li><strong>Personalização:</strong> Adapte o currículo para cada vaga para aumentar seu "Match".</li>
                     </ul>
                 </div>
-            </div>
+                <div class="mt-8 text-right">
+                    <a href="#" class="text-sm text-laranja-primario hover:underline">Voltar ao topo ↑</a>
+                </div>
+            </article>
 
-        </section>
+            <article id="modelos-curriculo" class="space-y-8">
+                <h2 class="text-3xl font-titulos font-bold text-center text-branco-suave">
+                    Modelos <span class="text-laranja-primario">Editáveis</span>
+                </h2>
+                <p class="text-center text-cinza-medio">Selecione o texto abaixo, copie e cole no seu editor de texto preferido.</p>
+
+                <div class="bg-branco-suave text-fundo-principal p-8 rounded-lg shadow-2xl font-mono text-sm overflow-x-auto relative">
+                    <div class="absolute top-0 right-0 bg-laranja-primario text-white px-3 py-1 text-xs font-bold rounded-bl-lg">MODELO SIMPLES</div>
+                    <pre class="whitespace-pre-wrap font-sans">
+🔷 DADOS PESSOAIS
+Nome Completo: [Seu Nome]
+Endereço: [Bairro – Cidade – Estado]
+Telefone: (XX) 9XXXX-XXXX
+E-mail: [seu.email@exemplo.com]
+LinkedIn: [link do perfil]
+
+🎯 OBJETIVO PROFISSIONAL
+[Ex: Atuar na área administrativa, aplicando minhas habilidades para apoiar as rotinas da empresa.]
+
+🧠 RESUMO PROFISSIONAL
+Profissional com experiência em [área], facilidade para aprender e foco em resultados. Organizado(a) e com bom relacionamento interpessoal.
+
+💼 EXPERIÊNCIA PROFISSIONAL
+[Nome da Empresa]
+📅 [Mês/Ano entrada] – [Mês/Ano saída]
+Cargo: [Seu Cargo]
+Atividades:
+- [Atividade 1]
+- [Atividade 2]
+
+🎓 ESCOLARIDADE
+[Curso] – [Nome da Escola/Faculdade] – [Ano de Conclusão]
+
+🛠️ COMPETÊNCIAS E HABILIDADES
+✔ Boa comunicação
+✔ Pacote Office (Word e Excel)
+✔ Trabalho em equipe
+                    </pre>
+                </div>
+
+                <div class="bg-branco-suave text-fundo-principal p-8 rounded-lg shadow-2xl font-mono text-sm overflow-x-auto relative">
+                    <div class="absolute top-0 right-0 bg-roxo-primario text-white px-3 py-1 text-xs font-bold rounded-bl-lg">MODELO ATS FRIENDLY</div>
+                    <pre class="whitespace-pre-wrap font-sans">
+[SEU NOME COMPLETO]
+📞 (XX) 9XXXX-XXXX | ✉️ email@exemplo.com | 🌍 Cidade/Estado
+
+RESUMO PROFISSIONAL
+Profissional com experiência em [área chave], com foco em [resultados: organização, vendas, etc]. Conhecimento em [ferramentas: Excel, Sistemas].
+
+EXPERIÊNCIA PROFISSIONAL
+[Nome da Empresa] – [Cargo]
+📅 [Mês/Ano Início] – [Mês/Ano Saída]
+Responsável por [atividade principal].
+- Implantação de [projeto] que gerou [resultado].
+- Uso de ferramentas como [Excel, CRM].
+
+FORMAÇÃO ACADÊMICA
+[Nome do Curso] – [Instituição]
+📅 Conclusão: [Ano]
+
+HABILIDADES TÉCNICAS
+- Excel (Intermediário)
+- Atendimento ao Cliente
+- Gestão de Processos
+
+COMPETÊNCIAS COMPORTAMENTAIS
+- Comunicação clara
+- Resolução de problemas
+- Foco em resultados
+                    </pre>
+                </div>
+                
+                <div class="mt-8 text-right">
+                    <a href="#" class="text-sm text-laranja-primario hover:underline">Voltar ao topo ↑</a>
+                </div>
+            </article>
+
+        </div>
     </main>
     
-    <footer class="bg-fundo-principal border-t border-fundo-cards py-8 mt-16">
+    <footer class="bg-fundo-principal border-t border-fundo-cards py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-cinza-medio text-sm">
-            <p>&copy; 2023 Agência Atthos. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Agência Atthos. Todos os direitos reservados.</p>
             <div class="flex gap-4 mt-4 md:mt-0">
                 <a href="https://www.facebook.com/agenciaatthos/" class="text-cinza-medio hover:text-laranja-primario transition-colors" target="_blank" aria-label="Facebook">
                     <iconify-icon icon="simple-icons:facebook" width="24" height="24"></iconify-icon>
